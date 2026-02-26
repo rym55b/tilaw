@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 30% 97%;
+    --foreground: 150 30% 10%;
+
+    --card: 45 25% 95%;
+    --card-foreground: 150 30% 10%;
+
+    --popover: 45 25% 95%;
+    --popover-foreground: 150 30% 10%;
+
+    --primary: 150 35% 25%;
+    --primary-foreground: 45 30% 97%;
+
+    --secondary: 42 60% 50%;
+    --secondary-foreground: 150 30% 10%;
+
+    --muted: 45 20% 90%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 42 70% 55%;
+    --accent-foreground: 150 30% 10%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 85%;
+    --input: 45 20% 85%;
+    --ring: 150 35% 25%;
+
+    --radius: 0.75rem;
+
+    --gold: 42 70% 55%;
+    --gold-light: 42 60% 75%;
+    --gold-dark: 42 60% 40%;
+    --emerald: 150 35% 25%;
+    --emerald-light: 150 30% 40%;
+    --emerald-dark: 150 40% 15%;
+
+    --sidebar-background: 150 30% 12%;
+    --sidebar-foreground: 45 30% 90%;
+    --sidebar-primary: 42 70% 55%;
+    --sidebar-primary-foreground: 150 30% 10%;
+    --sidebar-accent: 150 25% 20%;
+    --sidebar-accent-foreground: 45 30% 90%;
+    --sidebar-border: 150 20% 20%;
+    --sidebar-ring: 42 70% 55%;
+  }
+
+  .dark {
+    --background: 150 30% 6%;
+    --foreground: 45 20% 92%;
+
+    --card: 150 25% 10%;
+    --card-foreground: 45 20% 92%;
+
+    --popover: 150 25% 10%;
+    --popover-foreground: 45 20% 92%;
+
+    --primary: 42 70% 55%;
+    --primary-foreground: 150 30% 6%;
+
+    --secondary: 150 30% 18%;
+    --secondary-foreground: 45 20% 92%;
+
+    --muted: 150 20% 15%;
+    --muted-foreground: 45 15% 60%;
+
+    --accent: 42 60% 45%;
+    --accent-foreground: 150 30% 6%;
+
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 20% 18%;
+    --input: 150 20% 18%;
+    --ring: 42 70% 55%;
+
+    --gold: 42 70% 55%;
+    --gold-light: 42 50% 65%;
+    --gold-dark: 42 60% 40%;
+    --emerald: 150 35% 30%;
+    --emerald-light: 150 30% 45%;
+    --emerald-dark: 150 40% 15%;
+
+    --sidebar-background: 150 30% 8%;
+    --sidebar-foreground: 45 20% 90%;
+    --sidebar-primary: 42 70% 55%;
+    --sidebar-primary-foreground: 150 30% 6%;
+    --sidebar-accent: 150 25% 15%;
+    --sidebar-accent-foreground: 45 20% 90%;
+    --sidebar-border: 150 20% 15%;
+    --sidebar-ring: 42 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+  }
+
+  [dir="rtl"] body,
+  [dir="rtl"] {
+    font-family: 'Noto Sans Arabic', 'Amiri', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amiri', 'Noto Sans Arabic', serif;
+  }
+
+  [dir="ltr"] h1, [dir="ltr"] h2, [dir="ltr"] h3 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .islamic-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8a85c' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+  }
+
+  .gradient-emerald {
+    background: linear-gradient(135deg, hsl(var(--emerald)) 0%, hsl(var(--emerald-light)) 100%);
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-emerald-theme {
+    color: hsl(var(--emerald));
+  }
+}

@@ -1,0 +1,4 @@
+project_id = "ocbjsimvomovbnznasqn"
+
+[functions.matchmaking]
+verify_jwt = false
